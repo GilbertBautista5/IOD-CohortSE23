@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Flexbox Lists</title>
+    <style>
+        ul { display: flex; list-style: none; }
+        ul li { padding: 1em; }
+        /* ++ try adding your own styles to make it look better! */
+
+        /* easily change direction of list items on small screens */
+        @media screen and (max-width: 768px) {
+            ul { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>list item #1</li>
+        <li>list item #2</li>
+        <li>list item #3</li>
+        <li>list item #4</li>
+        <li>list item #5</li>
+        <li>list item #6</li>
+        <li>list item #7</li>
+    </ul>
+</body>
+</html>
