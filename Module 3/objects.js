@@ -81,15 +81,15 @@
             }
             // we can create multiple users with different names
             let user1 = new User('Gilbert', 'Bautista') // need to use 'new'
-            let user2 = new User('Connor', 'McGregor') // need to use 'new'
+            let user3 = new User('Connor', 'McGregor') // need to use 'new'
 
-            console.log(user1) // User { first: 'Tim', last: 'Smith' }
-            console.log(user2) // User { first: 'Tim', last: 'Smith' }
+            console.log(user1) // User { first: 'Gilbert', last: 'Bautista' }
+            console.log(user3) // User { first: 'Connor', last: 'McGregor' }
            
             user1.first = 'Lauren'
 
             console.log(user1)
-            console.log(user2)
+            console.log(user3)
 
             class newUser {
                 constructor(newFirst, newLast) {
@@ -97,12 +97,13 @@
                     this.nameObject = {first: newFirst, last: newLast}
                 this.first = newFirst;
                 this.last = newLast;
-                this.age = 45
                 }
                 hasShortName() {
                 return this.first.length >= 3
                 }
                 }
-                let user3 = new User('Will', 'Smith') // need to use 'new'
-                console.log(user3) // User { first: 'Tina', last: 'Smith' }
+                let user4 = new User('Will', 'Smith') // need to use 'new'
+                console.log(user4) // User { first: 'Will', last: 'Smith' }
+
+
               

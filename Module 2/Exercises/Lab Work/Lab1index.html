@@ -13,7 +13,7 @@
     <article>
         <p></p>
 
-        <pre> <stron> Dinner Ideas </strong> </pre>
+        <pre> <stron> UL & OL </strong> </pre>
 
         <ul>
             <li>unordered list 1</li>
@@ -53,48 +53,47 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>First cell - first row</td> 
-                    <td> second cell- first row </td>
-                    <td rowspan="1" > third cell- first row</td>
-                    
+                    <td>First cell - first row</td>
+                    <td>second cell- first row </td>
+                    <td colspan="2"> third cell- first row</td>
+
                 </tr>
                 <td> first cell- second row</td>
                 <td> second cell- second row</td>
-                <td colspan="2" > third cell- second row </td>
+                <td> third cell- second row </td>
 
 
-            </tr>
-    
+                </tr>
+
             </tbody>
         </table>
     </article>
     <header>
         <style>
-            table, th, td {
+            table,
+            th,
+            td {
                 border: 1px solid black;
             }
         </style>
-        
-        <nav> 
+
+        <nav>
             <!-- works like <a href="/index.html">Home</a> -->
             <a href="/">Home</a>
+            <a href="/form">Form</a>
         </nav>
     </header>
     <main>
         <img src="https://picsum.photos/200/300" alt="200px" />
         <video controls width="250">
-            <source src="/media/cc0-videos/flower.webm"
-                    type="video/webm">
-            <source src="/media/cc0-videos/flower.mp4"
-                    type="video/mp4">
+            <source src="/media/cc0-videos/flower.webm" type="video/webm">
+            <source src="/media/cc0-videos/flower.mp4" type="video/mp4">
             Sorry, your browser doesn't support embedded videos.
         </video>
-        <audio
-controls
-src="/media/cc0-audio/t-rex-roar.mp3">
-    Your browser does not support the
-    <code>audio</code> element.
-</audio>
+        <audio controls src="/media/cc0-audio/t-rex-roar.mp3">
+            Your browser does not support the
+            <code>audio</code> element.
+        </audio>
     </main>
     <footer>Copyright 2021 &copy;</footer>
 </body>
