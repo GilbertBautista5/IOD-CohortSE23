@@ -180,3 +180,21 @@ console.log(false == 0) // true, because 0 is equivalent to false. ++ try it usi
 
 console.log("02" == 2) // true - they are equivalent (types not checked)
 console.log("02" === 2) // false - they are not strictly equal (types are checked)
+
+let cat1 = "fluffy"
+let cat2 = "Fuzzball"
+let cat3 = "Toothless"
+let cat4 = "Fluffy2"
+
+console.log(cat1 < cat2)
+console.log(cat2 >  cat3)
+console.log(cat1 < cat4)
+
+console.log("2" > 1) // true - converts to 2 > 1
+console.log("2" != 1) // true - converts to 2 is not equal to 1
+
+console.log("02" == 2) // true - converts to 2 == 2
+console.log(true == 1) // true - true converts to 1
+console.log(false == 0) // true - false converts to 0
+console.log(null == undefined) // true - both convert to 0
+
