@@ -33,39 +33,66 @@
       margin: 20px 0;
       padding: 20px;
       border: 1px solid black;
-      text-overflow: ellipsis; 
+      overflow:scroll; 
       height: 20px;
       outline: 10px;
       border-radius: 20px;
-      background-size: contain;
-      background-repeat: no-repeat;
+      background-size: fill;
+      background-repeat:no-repeat;
       background-position: center;
+      background-image: url(img1.png);
 
     }
 
     /* III. Position */
 
     .position-absolute {
-      position: center;
-      ;
+      position: absolute;
+      right: 50px;
+      top: 20px
     }
 
     .position-relative {
-      position: right;
+      position: relative;
+    }
+    .position-sticky {
+      position: sticky;
+      top: 50%;
+      left: 50%;
+      background-color: blue;
+      display:inline
     }
 
     /* IV. Styling text */
-
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
     .text-style {
       font-size: medium;
       color: rgb(35, 148, 78);
       line-height: 2;
+      font-weight: 800;
+      font-family: 'Roboto', sans-serif;
+      letter-spacing: 2px;
+      word-spacing: 5px;
+      text-transform:uppercase;
+      text-decoration:dotted;
     }
 
+    /* V.styling links*/
+    a:link,a:visited,a {
+      color: blue;
+      font-size: 1.5em;
+      text-decoration: underline;
+    }
+
+    a:hover,a:active,a:focus {
+      color: red;
+      font-size: 2em;
+      text-decoration: line-through;
+    }
     /* VI. calc() */
 
     .calc-style {
-      width: 100vw - 100px;
+      width:calc(100vw - 100px);
     }
   </style>
 </head>
