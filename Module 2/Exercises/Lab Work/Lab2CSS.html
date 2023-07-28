@@ -21,11 +21,11 @@
 
     /* II. Box model and common properties */
 
-    .my-descendants-are-styled {
+    .my-descendants-are-styled p {
       background-color: rgb(201, 25, 25);
     }
 
-    .my-children-are-styled {
+    .my-children-are-styled > p{
       background-color: rgb(201, 25, 25);
     }
 
@@ -33,6 +33,13 @@
       margin: 20px 0;
       padding: 20px;
       border: 1px solid black;
+      text-overflow: ellipsis; 
+      height: 20px;
+      outline: 10px;
+      border-radius: 20px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
 
     }
 
