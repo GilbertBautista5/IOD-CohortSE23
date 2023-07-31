@@ -51,4 +51,5 @@ function getGreeting(name) {
     return 'Hello ' + name + '!';
     }
 
-const getGreeting = (name) => name.person().getGreeting('G')
+const getGreeting = (name) => name.person().getGreeting('')
+

@@ -1,50 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Lab4resume.css">
-    <title>Portfolio</title>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #0378ff;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #b4b7b9;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #0378ff;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
 </head>
 <body>
-    <div id="header"></div>
-<div class="left"></div>
-<div class="stuff">
-  <br><br>
-  <h1>Resume</h1>
-  <h2>Gilbert Bautista</h2>
-  <hr />
-  <br>
-  <p class="head">Experience</p>
-  <ul>
-    <li>Data Analyst</li>
-    <li>Lawyer</li>
-    <li>Design</li>
-    <li>Programming</li>
-    <li>Computer Science</li>
-  </ul>
-  <p class="head">Skills</p>
-  <ul>
-    <li>JS & HTML & CSS</li>
-  </ul>
-  <p class="head">Education</p>
-  <ul>
-    <a href="https://www.institutedata.com/courses/">
-      <li> Institute of data</li>
-    </a>
-  <p class="head">Experience</p>
-  <ul>
-    <li>Programming</li>
-    <li>Coding</li>
-  </ul>
-  <p class="head">Hobbies</p>
-  <ul>
-    <li>Basketball</li>
-    <li>Oztag</li>
-    <li>Gaming</li>
-  </ul>
+
+  <div class="header">
+    <h1>My Resume</h1>
+    <p>A resume created by me.</p>
+  </div>
+  
+
+
+<div class="row">
+  <div class="side">
+    <h2>About Me</h2>
+    <h5>Gilbert Bautista:</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Email: gmikhail24@gmail.com</p>
+    <p> DOB: 05/08/2001</p>
+    <h3>Previous Jobs</h3>
+    <p>Find out more below;</p>
+    <div class="fakeimg" style="height:60px;">Pauls Warehouse</div><br>
+    <div class="fakeimg" style="height:60px;">BAC Systems</div><br>
+    <div class="fakeimg" style="height:60px;">Actron Air</div>
+  </div>
+  <div class="main">
+    <h2>RESUME</h2>
+    <h5>Experience, August 5, 2023</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Javascript & HTML & CSS</p>
+    <p>Basic coding to built websites and debug errors within HTML.</p>
+    <br>
+    <h2>Skills</h2>
+    <h5>Software Engineering, OCT 4, 2023</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p> Attributs</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  </div>
 </div>
-<div class="right"></div>
-    
+
+<div class="footer">
+  <h2></h2>
+</div>
+
 </body>
 </html>
