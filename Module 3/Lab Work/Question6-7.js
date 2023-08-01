@@ -26,8 +26,8 @@ const westley = {
     }
     inigo.greeting(westley)
     inigo.greeting(rugen)
-
-('\nQUESTION7')
+    
+    ('\nQUESTION7')
     const basketballGame = {
         score: 0,
         fouls: 0,
@@ -55,8 +55,10 @@ const westley = {
         //modify each of the above object methods to enable function chaining as below:
         basketballGame
         .basket()
-        .foul()
+        .freeThrow()
         .freeThrow()
         .basket()
         .threePointer()
         .halfTime();
+
+('\nQUESTION8')

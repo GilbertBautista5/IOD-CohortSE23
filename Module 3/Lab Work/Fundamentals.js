@@ -31,7 +31,7 @@ let lessThan1 = three < four //true
 let lessThan2 = thirty < four // false
 
 ('/nQuestion3')
-if (0) console.log('#1 zero is true') // doesnt print because 0 is not defined
+if (0) console.log('#1 zero is true')
 if ("0") console.log('#2 zero is true')
 if (null) console.log('null is true') // doesnt print because null has no value
 if (-1) console.log('negative is true')
