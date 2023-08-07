@@ -1,4 +1,4 @@
-('/nQuestion1')
+// ('/nQuestion1')
 "" + 1 + 0 //10
 "" - 1 + 0 //-1
 true + false //1
@@ -17,7 +17,8 @@ undefined == null // true
 undefined === null // false
 " \t \n" - 2 //-2
 
-('/nQuestion2')
+// ('/nQuestion2')
+
 let three = "3"
 let four = "4"
 let thirty = "30"
@@ -30,14 +31,15 @@ let subtraction = three - four //-1
 let lessThan1 = three < four //true
 let lessThan2 = thirty < four // false
 
-('/nQuestion3')
+// ('/nQuestion3')
+
 if (0) console.log('#1 zero is true')
 if ("0") console.log('#2 zero is true')
 if (null) console.log('null is true') // doesnt print because null has no value
 if (-1) console.log('negative is true')
 if (1) console.log('positive is true')
 
-('/nQuestion4')
+// ('/nQuestion4')
 let a = 2, b = 3;
 let result = `${a} + ${b} is `;
 if (a + b < 10) {
@@ -46,10 +48,9 @@ result += 'less than 10';
 result += 'greater than 10';
 }
 
-('/nQuestion5')
+// ('/nQuestion5')
 function getGreeting(name) {
     return 'Hello ' + name + '!';
     }
 
-const getGreeting = (name) => name.person().getGreeting('')
 
