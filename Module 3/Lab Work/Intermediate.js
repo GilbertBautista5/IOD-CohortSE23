@@ -227,3 +227,12 @@ return totalSalaries
 }
 
 console.log(sumSalaries(salaries))
+
+console.log('\nQUESTION10')
+
+const today = new Date();
+console.log('Current time is ' + today.toLocaleTimeString())
+console.log(today.getHours() + ' hours have passed so far today')
+console.log(today.getMinutes() + ' minutes passed today')
+console.log(today.getSeconds() + ' seconds passed today')
+

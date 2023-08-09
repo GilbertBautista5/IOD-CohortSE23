@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e3f2fd;
+        }
+
+        #card-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            padding: 10px;
+            border: 1px #e3f2fd;
+            border-radius: 10px;
+            background-color: white;
+            margin: 1em;
+        }
+
+        .card-title {
+            font-weight: 600;
+            font-size: 3em;
+            padding: 0 0 10px 0;
+        }
+
+        .card-description {
+            font-weight: 400;
+            font-size: 2em
+        }
+    </style>
+</head>
+
+<body>
+    <template id="card-template">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-title"></div>
+                <div class="card-text"></div>
+            </div>
+        </div>
+    </template>
+
+    <template id="artist-template">
+        <div class="artist">
+            <div class="artist-body">
+                <div class="artist-name"></div>
+                <div class="artist-portfolio"></div>
+                <div class="artist-image" src="" alt="artist artwork"></div>
+            </div>
+        </div>
+    </template>
+
+    <template id="portfolio-template">
+        <div class="portfolio">
+            <div class="portfolio-body">
+                <div class="portfolio-body"></div>
+                <div class="portfolio-image" src="" alt="artist artwork"></div>
+            </div>
+        </div>
+    </template>
+
+    <div id="card-template"></div>
+    <div id="artist-template"></div>
+    <div id="portfolio-template"></div>
+
+    <script>
+    
+    
+        const card1 = { title: 'Card #1', text: 'This is the text for my first card.'}
+        const cards = [
+        { title: 'Card #1', text: 'This is the text for my first card.'},
+        { title: 'Card #2', text: 'This is the text for my second card.'},
+        { title: 'Card #3', text: 'This is the text for my third card.'},
+        { title: 'Card #4', text: 'This is the text for my fourth card.'}
+        ]
+
+        const data1 = {title: 'artist', age: 'age'};
+        const data = [
+            {name: 'Gilbert', age: 21},
+            {name: 'jack', age: 34},
+            {name: 'dan', age: 50},
+            {name: 'Glen', age: 18}
+            ]
+
+
+        const artist = {
+            name: "Van Gogh",
+            portfolio: [
+                {
+                    title: "portrait",
+                    url: "https://collectionapi.metmuseum.org/api/collection/ v1 / iiif / 436532 / 1671316 / main - image"
+                },
+
+                {
+                    title: "sky",
+                    url: "https://mymodernmet.com/wp/wp-content/uploads/2020/11/White - house - night - van - goh - worldwide - 2.jpg"
+                },
+            ]
+        }
+
+        function addCard(card) {
+            const template = document.getElementById("card-template").content.cloneNode(true);
+            template.querySelector('.card-title').innerText = card.title;
+            template.querySelector('.card-text').innerText = card.text;
+            document.querySelector('#card-list').appendChild(template);
+        }
+        if ('content' in document.createElement('template')) {
+            // addCard(card1); 
+            for (let loopCard of cards) {
+                addCard(loopCard)
+            }
+
+            cards.forEach(loopCard => addCard(loopCard))
+        }
+
+        function addData(data) {
+            const template = document.getElementById("card-template").content.cloneNode(true);
+            template.querySelector('.card-title').innerText = data.name;
+            template.querySelector('.card-text').innerText = data.age;
+            document.querySelector('#card-list').appendChild(template);
+        }
+        if ('content' in document.createElement('template')) {
+           
+            for (let loopData in Data) {
+                addData(loopData);
+            }
+
+        };
+        
+    
+        function addArtist(artist) {
+            const template = document.getElementById("artist-template").content.cloneNode(true);
+
+            template.querySelector('.artist-name').innerText = artist.name;
+            artist.portfolio.forEach((portfolio) => {
+                const template1 = document.getElementById('portfolio-template').content.cloneNode(true)
+                template.querySelector('.portfolio-title').innerText = portfolio.title;
+                template.querySelector('.portfolio-text').src = portfolio.url;
+                document.querySelector('portfolio').appendChild(template1);
+
+            });
+
+            document.querySelector('#artist-lst').appendChild(template)
+        }
+
+
+    </script>
+</body>
+
+</html>
