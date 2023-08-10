@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ECharts</title>
+    <!-- Include the ECharts file you just downloaded -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
+  </head>
+  <body>
+    <!-- Prepare a DOM with a defined width and height for ECharts -->
+    <div id="main" style="width: 800px;height:400px;"></div>
+    <div id="foodChart" style="width: 800px;height:400px;"></div>
+    <script type="text/javascript">
+      // Initialize the echarts instance based on the prepared dom
+      var myChart = echarts.init(document.getElementById('main'));
+
+      // Specify the configuration items and data for the chart
+      var option = {
+        title: {
+          text: 'ECharts Getting Started Example'
+        },
+        tooltip: {},
+        legend: {
+          data: ['august sales', 'july sales']
+        },
+        xAxis: {
+          data: ['Shirts', 'Cardigans', 'Chiffons', 'Pants', 'Heels', 'Socks']
+        },
+        yAxis: {},
+        series: [
+          {
+            name: 'august sales',
+            type: 'bar',
+            data: [20, 12, 38, 10, 65, 20]
+          },
+          {
+            name: 'july sales',
+            type: 'bar',
+            data: [15, 17, 34, 15, 60, 25]
+          }
+        ]
+      };
+
+      // Display the chart using the configuration items and data just specified.
+      myChart.setOption(option);
+
+      const foodChart = echarts.init(document.getElementById('foodChart'));
+
+      let foodOptions = {
+            title: {
+                text: 'ECharts Food Example'
+            },            
+            legend: {
+                // Try 'horizontal'
+                //try changing the position of the legend
+                orient: 'vertical',
+                right: 10,
+                top: 'center'
+            },
+            dataset: {
+                source: [
+                    //try to add in some data for 2018 and 2019
+                    //try to add in another product with made-up data
+                    ['product', '2015', '2016', '2017', '2018'],
+                    ['Matcha Latte', 43.3, 85.8, 93.7, 75.2],
+                    ['Milk Tea', 83.1, 73.4, 55.1, 84.2],
+                    ['Cheese Cocoa', 86.4, 65.2, 82.5, 12.4],
+                    ['Walnut Brownie', 72.4, 53.9, 39.1, 64.1]
+                ]
+            },
+xAxis: { type: 'category' },
+            yAxis: {},
+            series: [{ type: 'bar' }, { type: 'bar' }, { type: 'bar' }, { type: 'bar' }],
+            //custom color palette https://echarts.apache.org/handbook/en/concepts/style#color-palette
+            color: [
+                '#dd6b66',
+                '#759aa0',
+                '#e69d87',
+                '#8dc1a9',
+                '#ea7e53',
+                '#eedd78',
+                '#73a373',
+                '#73b9bc',
+                '#7289ab',
+                '#91ca8c',
+                '#f49f42'
+            ]
+        };      
+        // Display the chart using the configuration items and data just specified.
+        foodChart.setOption(foodOptions);
+
+    </script>
+  </body>
+</html>
