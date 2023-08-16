@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FUREVER</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: "Lato", sans-serif
+        }
+
+        .mySlides {
+            display: none
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                    class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <a href="#dogs" class="w3-bar-item w3-button w3-padding-large w3-hide-small">DOGS</a>
+            <a href="#rescued" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RESCUED</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="#" class="w3-bar-item w3-button">Resources</a>
+                    <a href="#" class="w3-bar-item w3-button">Blog</a>
+                    <a href="#" class="w3-bar-item w3-button">Media</a>
+                </div>
+            </div>
+            <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i
+                    class="fa fa-search"></i></a>
+        </div>
+    </div>
+
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="#dogs" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">DOGS</a>
+        <a href="#rescued" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">RESCURED</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Resources</a>
+    </div>
+
+    <div class="w3-content" style="max-width:2000px;margin-top:46px">
+        <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="header">
+            <h2 class="w3-wide">Furever dogs looking for Furever Homes</h2>
+    </div>
+<body>
+    <h1> <strong>Wanted List</strong></h1>
+
+    <form onsubmit="addBreed(event)">
+        <label for="addName "> Add Breed: </label> 
+        <br>
+        <input name='addName' id='addName' type="text" /> 
+        <br>
+   
+        <label for = "description"> Description: </label> 
+        <br>
+        <input name='description' id='description' type="text" />
+        <br>
+       <button> Submit</button>
+   
+   </form> 
+
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://www.savour-life.com.au/media/dogs/60553/571895b9-4b8e-45da-8d3e-284b57347eab.jpg?width=540&height=540&autorotate=true&bgcolor=FFFFFF" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://www.savour-life.com.au/media/dogs/60782/6954ad5b-8d6a-4bb2-8299-a12c830120fe.jpg?width=260&height=260&mode=crop&autorotate=true" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://www.savour-life.com.au/media/dogs/52838/31c8e108-da8b-468d-bff8-d0d92c091bc0.jpg?width=540&height=540&autorotate=true&bgcolor=FFFFFF" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://www.savour-life.com.au/media/dogs/56255/9ddcf2b4-4928-4e7e-8fe3-49dff66a9300.jpg?width=540&height=540&autorotate=true&bgcolor=FFFFFF" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://www.savour-life.com.au/media/dogs/62416/013070b9-2b05-4a7e-af08-c8ec48c95953.jpg?width=540&height=540&autorotate=true&bgcolor=FFFFFF" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://bamahuskies.com/wp-content/uploads/2023/04/about-husky-image.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <template id="card-template">
+        <div class="card col-8" style="width: 18rem; margin:10px">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text"></p>
+            </div>
+        </div>
+    </template>
+    
+    <template id="card-template">
+        <div class="card col-8" style="width: 18rem; margin:10px">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text"></p>
+            </div>
+        </div>
+    </template>
+ 
+    <main>
+        <div id='breeds' class="row"> </div>
+    </main>
+
+    <script>
+        let cards = [
+            { id: 1, Breed: 'Staffy', description: 'Hi my name is Django and im looking for a home' },
+            { id: 2, Breed: 'Boder Collie', description: 'Hi my name is Alina and im looking for a home' },
+            { id: 3, Breed: 'Ridgeback', description: 'Hi my name is Jack and im looking for a home' }
+        ];
+        function addCard() {
+            const newsList = document.querySelector('#addName');
+            newsBreeds.innerHTML = ""
+            cards.forEach(card => {
+                const template = document.getElementById("card-template").content.cloneNode(true);
+                template.querySelector('.card-title').innerText = card.title;
+                template.querySelector('.card-text').innerText = card.description;
+                newsList.appendChild(template);
+
+            });
+        }
+        function addCard(e) {
+            console.log(e)
+            e.preventDefault();
+            let newItem = {
+                id: cards.length+1 ,
+                title: document.querySelector('#addName').value ,
+                description: document.querySelector('#description').value ,
+
+            }
+            cards.push(newItem);
+            document.forms[0].reset();
+        }
+        addCard()
+        let timer = setInterval(addCard, 5000)
+    </script>
+
+
+
+</body>
+    
+
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </footer>
+
+</body>
+
+</html>

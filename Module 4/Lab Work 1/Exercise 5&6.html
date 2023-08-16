@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<template id="card-template">
+    <div class="card col-8" style="width: 18rem; margin:10px">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text"></p>
+        </div>
+    </div>
+</template>
+
+<template id="card-template">
+    <div class="card col-8" style="width: 18rem; margin:10px">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text"></p>
+        </div>
+    </div>
+</template>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Managing Data</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <h1> <strong>NEWS</strong></h1>
+
+<form onsubmit="addNews(event)">
+     <label for="newsTitle "> News title: </label> 
+     <br>
+     <input name='newsTitle' id='newsTitle' type="text" /> 
+     <br>
+
+     <label for = "newsContent"> News content: </label> 
+     <br>
+     <input name='newsContent' id='newsContent' type="text" />
+     <br>
+    <button> Submit</button>
+
+</form> 
+ 
+    <main>
+        <div id='news-list' class="row"> </div>
+    </main>
+
+    <script>
+        let cards = [
+            { id: 1, title: 'News1', description: 'bla' },
+            { id: 2, title: 'News2', description: 'blabla' },
+            { id: 3, title: 'News3', description: 'blablabla' }
+        ];
+        function addCard() {
+            const newsList = document.querySelector('#news-list');
+            newsList.innerHTML = ""
+            cards.forEach(card => {
+                const template = document.getElementById("card-template").content.cloneNode(true);
+                template.querySelector('.card-title').innerText = card.title;
+                template.querySelector('.card-text').innerText = card.description;
+                newsList.appendChild(template);
+
+            });
+        }
+        function addNews(e) {
+            console.log(e)
+            e.preventDefault();
+            let newItem = {
+                id: cards.length+1 ,
+                title: document.querySelector('#newsTitle').value ,
+                description: document.querySelector('#newsContent').value ,
+
+            }
+            cards.push(newItem);
+            document.forms[0].reset();
+        }
+        addCard()
+        let timer = setInterval(addCard, 5000)
+    </script>
+
+</body>
+
+</html>
