@@ -11,6 +11,11 @@ import FullName from "./components/FullName";
 import ComplexComment from "./components/ComplexComponents";
 import Callout from "./components/CallOut";
 import MoviesList from "./components/MoviesList";
+import MoodChanger from "./components/MoodChanger";
+import BirthdayTranslator from "./components/BirthdayTranslator";
+import Weather from "./components/Weather";
+import LoginForm from "./components/LoginForm";
+import ExplodingBomb from "./components/ExplodingBomb";
 
 
 function ExampleComponent() {
@@ -69,6 +74,16 @@ function App() {
     <>
 
     <MoviesList/>
+
+    <MoodChanger/>
+
+    <BirthdayTranslator/>
+
+    <Weather/>
+
+    <LoginForm />
+
+    <Greeting first="Hello" last="John"  />
 
       <div>
         <a href="https://vitejs.dev" target="_blank">
@@ -146,6 +161,8 @@ props.children */}
         title="Nested React Component" message="Simple message with a fancy box applied via composition">
         <FullName first="Elon" last="Musk" />
       </Callout>
+
+      <ExplodingBomb/>
     </>
   );
 }
