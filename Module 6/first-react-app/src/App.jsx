@@ -16,6 +16,7 @@ import BirthdayTranslator from "./components/BirthdayTranslator";
 import Weather from "./components/Weather";
 import LoginForm from "./components/LoginForm";
 import ExplodingBomb from "./components/ExplodingBomb";
+import BigCats from "./components/BigCats";
 
 
 function ExampleComponent() {
@@ -163,6 +164,8 @@ props.children */}
       </Callout>
 
       <ExplodingBomb/>
+
+      <BigCats />
     </>
   );
 }
