@@ -57,13 +57,17 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #d4d4d4;
+    color: #1f2225;
     background-color: #0f0f0f;
   }
   a:hover {
     color: #df7a08;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #df7a08;
   }
+}
+
+body {
+  background-image: url("https://m.media-amazon.com/images/I/A1GDY+uv2nL._AC_UF1000,1000_QL80_.jpg");
 }

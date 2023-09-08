@@ -4,8 +4,9 @@ import AnimeCard from "../Components/AnimeCard";
 export default function home() {
     const [results, setResults] = useState([]);
     const [search, setSearch] = useState("");
+    const [genre, setGenre] = useState("");
     useEffect (()=>{
-        fetch(`https://kitsu.io/api/edge/trending/anime?filter[text]=${search}`)
+        fetch(`https://kitsu.io/api/edge/anime?filter[text]=${search}?filter[categories]=${genre}`)
       .then((response) => response.json())
       .then(data=>{
         const animeResults = data.data.map(item=>(
@@ -17,7 +18,7 @@ export default function home() {
         ))
         setResults(animeResults)
       })
-    },[search])
+    },[search,genre])
 
     return (
       <div className="HomePage">
@@ -25,6 +26,9 @@ export default function home() {
         <input type='text' onChange={(e)=> setSearch(e.target.value)} />
         <select name='genres' id="" onChange={(e)=> setGenre(e.target.value)} >
           <option value='adventure'>Adventure</option>
+          <option value='adventure'>Romance</option>
+          <option value='adventure'>Sports</option>
+          <option value='adventure'>Fantasy</option>
           </select>
           {results}
       </div>

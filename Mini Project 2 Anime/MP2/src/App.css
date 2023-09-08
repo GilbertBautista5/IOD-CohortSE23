@@ -44,3 +44,11 @@
 .background {
   color: black
 }
+
+.componentBox { border: 1px solid #ffffff; margin: 1em;
+  padding: 1em; text-align: center; background: #ffffff; }
+
+.h1 {
+    color: #df7a08;
+  }
+  

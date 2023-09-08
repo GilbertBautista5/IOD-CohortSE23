@@ -6,7 +6,7 @@ export default function Browse() {
     const [results, setResults] = useState([]);
     const [search, setSearch] = useState('');
     useEffect (()=>{
-        fetch(`https://kitsu.io/api/edge/trending/anime?filter[text]=${search}`)
+        fetch('https://kitsu.io/api/edge/trending/anime')
       .then(response => response.json())
       .then(data=>{
         const animeResults = data.data.map(item=>(
