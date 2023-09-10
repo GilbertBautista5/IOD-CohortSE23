@@ -1,16 +1,14 @@
-"use client"; // client component, not server rendered
+"use client"; 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-// copied from previous NavBar.jsx component, modified for Next.js
-// save as src/components/NavBar.jsx
 function NavBar() {
-  const path = usePathname(); // hook to check current path
+  const path = usePathname(); 
 
   return (
     <nav className="NavBar" style={{ backgroundColor: "#09193b", color: "#14bbe5" }}>
       <ul className="menu">
-        {/* Next.js Link components use href instead of to prop */}
+
         <li>
           <Link href="/">Home</Link>
         </li>
@@ -24,11 +22,6 @@ function NavBar() {
             Bitcoin Rates
           </Link>
         </li>    
-        <li>
-          <Link href="/posts" className={path.startsWith("/posts") ? "active" : null}>
-            Posts
-          </Link>
-        </li> 
         </ul>
     </nav>
   );
