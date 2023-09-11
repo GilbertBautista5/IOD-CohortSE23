@@ -92,7 +92,7 @@ function BigCatsList() {
     <div className="BigCatsList componentBox">
       <ul> {BigCatsItem} </ul>
       <button onClick={handleReverseBigCats}>Reverse List</button>
-      <button onClick={handleSortBigCatsName}>Sort by Name List</button>
+      <button onClick={handleSortBigCatsName}>Sort by Alphabetical Order</button>
       <button onClick={handleAddBigCats}>Add Big Cat</button>
     </div>
     </>
