@@ -8,3 +8,4 @@ const BigCats = [
     { id: 7, name: 'Tiger', latinName: 'Panthera tigris' },
 ];
 
+export default BigCats
