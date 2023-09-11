@@ -12,7 +12,7 @@ function MoodChanger() {
 
   // Calls setMood with a conditional state value
   const handleRunningLate = () => {
-    let newMood = "stressed";
+    let newMood = <p>&#128563;</p>;
     if (mood === "stressed") newMood = "really stressed";
     else if (mood === "really stressed") newMood = "giving up";
     setMood(newMood);
@@ -26,7 +26,7 @@ function MoodChanger() {
     <div className="MoodChanger componentBox">
       Current Mood: {mood}
       {/* Using arrow functions */}
-      <button onClick={() => setMood("tired")}>Stay Up Late</button>
+      <button onClick={() => setMood(<p>&#128564;</p>)}>Stay Up Late</button>
 
       {/* Using custom event handler functions */}
       <button onClick={handleRunningLate}>Running Late</button>

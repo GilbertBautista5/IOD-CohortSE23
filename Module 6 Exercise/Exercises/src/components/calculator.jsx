@@ -57,10 +57,10 @@ function Calculator() {
         </section>
 
         <section className="operators">
-          <button onClick={() => handleClick("÷")}>÷</button>
-          <button onClick={() => handleClick("x")}>x</button>
-          <button onClick={() => handleClick("-")}>-</button>
-          <button onClick={() => handleClick("+")}>+</button>
+          <button onClick={() => handleClick("/")}>divide</button>
+          <button onClick={() => handleClick("*")}>times</button>
+          <button onClick={() => handleClick("-")}>minus</button>
+          <button onClick={() => handleClick("+")}>plus</button>
           <button onClick={() => handleResult()}>=</button>
         </section>
       </section>
