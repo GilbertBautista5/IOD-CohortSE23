@@ -2,9 +2,9 @@ const { DataTypes, Model } = require("sequelize");
 let dbConnect = require("../dbConnect");
 const sequelizeInstance = dbConnect.Sequelize;
 
-class Post extends Model {}
+class Comment extends Model {}
 //Sequelize will create this table if it doesn't exist on startup
-Post.init(
+Comment.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,30 +12,19 @@ Post.init(
       autoIncrement: true,
       primaryKey: true,
     },
-    title: {
+    comment: {
       type: DataTypes.STRING,
       allowNull: false,
       required: true,
     },
-    description: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      required: true,
-    },
-    img: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      required: true,
-      unique: true,
-    },
-   
+
   },
   {
     sequelize: sequelizeInstance,
-    modelName: "Post", //use lowercase plural format
+    modelName: "comments", //use lowercase plural format
     timestamps: true,
     freezeTableName: true,
   }
 );
 
-module.exports = Post;
+module.exports = Comment;
